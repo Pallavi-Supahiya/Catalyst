@@ -15,6 +15,13 @@ input {
   border-radius: 15px;
   text-align: right;
 }
+.buttons {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
 button {
   font-size: 33px;
   color: #ffffff;

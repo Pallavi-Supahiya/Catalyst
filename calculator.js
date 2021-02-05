@@ -7,6 +7,7 @@ function validate(evt) {
     output.value = vl;
     outputValue = vl;   
 }
+
 for (item of buttons) {
     item.addEventListener('click', (e)=>{
         buttonText = e.target.innerText;
@@ -23,7 +24,8 @@ for (item of buttons) {
         }
         else if (buttonText == '=')
         {
-            output.value = eval(outputValue); 
+             outputValue = outputValue.replace(/[/^]/g,'**');
+             output.value = eval(outputValue);
         }
         else if (buttonText == 'C')
         {
